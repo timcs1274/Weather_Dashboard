@@ -13,3 +13,8 @@ header{
 border-style: solid;
 
 }
+
+#side-bar{
+    display:inline-block;
+    
+}
