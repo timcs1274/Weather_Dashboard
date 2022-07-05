@@ -3,18 +3,18 @@ header{
     text-align: center;
 }
 
-.cardcontainer{
-    margin: 0px;
-    padding-left: 30px;
-    background-color: darkslateblue;
-}
-
-.container{
-border-style: solid;
-
-}
-
 #side-bar{
     display:inline-block;
-    
+    height: 75vh;
+    line-height: 50px;
+}
+
+
+.weather-info-container{
+    display: inline-block;
+    margin: 0px;
+    position: right;
+    border-style: solid;
+    width: 75vw;
+    height: 75vh;
 }
