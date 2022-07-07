@@ -12,8 +12,8 @@ header{
 
 .weather-info-container{
     display: inline-block;
-    margin: 0px;
-    position: right;
+    margin-left: 20px;
+   position: fixed;
     border-style: solid;
     width: 75vw;
     height: 75vh;
