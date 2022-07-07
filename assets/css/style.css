@@ -19,6 +19,13 @@ header{
     height: 75vh;
 }
 
-#uv-index-container{
-    background-color: white;
+.uv-low{
+    background-color: lightgreen;
+}
+
+.uv-moderate{
+    background-color: orange;
+}
+.uv-high{
+    background-color: red;
 }
