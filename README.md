@@ -11,9 +11,11 @@ This repository includes an [index.html](index.html), [script.js](script.js), [s
 
 Using this [Weather Dashboard](https://timcs1274.github.io/Weather_Dashboard/) is easy! All one needs to do is input the city which they would like to see the weather for and click "search". 
 
+
 ## Learning Points
 
 This project has been a great culmination of all of the previous tools I have learned. This was the first project that I did which fetched data from a third-party api. Selecting portions of the data, and storing certain peices proved difficult, but I ultimately got it to work. Overall, this project had many learning points and refreshers!
+
 
 ## Credits
 
