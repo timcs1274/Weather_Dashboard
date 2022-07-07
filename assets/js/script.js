@@ -17,3 +17,5 @@ for (i = 0; i <=2;){
         $("#uv-index-container").addClass("uv-high");
     }
 }
+
+//local storage
