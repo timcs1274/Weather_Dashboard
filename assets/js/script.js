@@ -17,3 +17,13 @@ function displayWeather(event){
         currentWeather(city);
     }
 }
+
+function currentWeather(city){
+  var queryURL= "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=" + APIKey;
+  $.ajax({
+      url:queryURL,
+      method:"GET",
+  }).then(function(response){
+      console.log(response);
+  });
+}
