@@ -9,59 +9,78 @@
     <title>Document</title>
 </head>
 
-<body>
-<header>
-    <h1>Weather Dashboard</h1>
-</header>
-
-<div id="side-bar">
-<div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Search for a city" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+<div class="jumbotron container-fluid mt-2 text-center p-2" style="background-color:#c97f7f ;color: white;">
+  <h1> <strong>Weather Dashboard</strong></h1>
 </div>
+<div class="container">
+  <div class="row">
+      <div class="col-sm-4 bg-light">
+          <h4 class="pt-1"><strong>Search for a City:</strong></h4>
+          <div class="input-group mb-3">
+              <input type="text" class="form-control"id="search-city" aria-label="City Search" aria-describedby="search-button">
+              <div class="input-group-append">
+                  <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+              </div>
+          </div>
+          <button class=" btn btn-primary" type="button" id="clear-history">Clear history</button>
+          <ul class="list-group">
 
-<div class="list-group-flush">
-  <a href="#" id = "recent1" class="list-group-item list-group-item-action">Chicago</a><!--Chicago-->
-  <a href="#" id = "recent2" class="list-group-item list-group-item-action">Austin</a><!--Austin-->
-  <a href="#" id = "recent3" class="list-group-item list-group-item-action">New York</a><!--New York-->
-  <a href="#" id = "recent4" class="list-group-item list-group-item-action">Orlando</a><!--Orlando-->
-  <a href="#" id = "recent5" class="list-group-item list-group-item-action">San Francisco</a><!--San Francisco-->
-  <a href="#" id = "recent6" class="list-group-item list-group-item-action">Seattle</a><!--Seattle-->
-  <a href="#" id = "recent7" class="list-group-item list-group-item-action">Denver</a><!--Denver-->
-  <a href="#" id = "recent8" class="list-group-item list-group-item-action">Atlanta</a> <!--Atlanta-->
-</div>
-</div>
+          </ul>
+      </div>   
+      <div class="col-sm-8">
+          <div class="row ml-2 border border-dark rounded">
+              <div class="col-sm-12" id="current-weather">
+                  <h3 class="city-name mb-1 mt-2 bolder" id="current-city"></h3>
+                  <p>Temperature:<span class="current" id="temperature"></span></p>
+                  <p>Humidity:<span class="current" id="humidity"></span></p> 
+                  <p>Wind Speed:<span class="current" id="wind-speed"></span></p>
+                  <p>UV index:<span class="current bg-danger rounded py-2 px-2 text-white" id="uv-index"></span></p> 
+              </div>
+          </div>
 
-<Div class="weather-info-container">
-  <h3>City name:</h3>
-  <ul class="info-list-group">
-    <li class="list-group-item">Temperature: </li>
-    <li class="list-group-item">Wind: </li>
-    <li class="list-group-item">Humidity: </li>
-    <li class="list-group-item" id = "uv-index-container">UV Index: </li>
-  </ul>
+          <div class="col-sm-12" id ="future-weather">
+              <h3>5-Day Forecast:</h3>
+              <div class="row text-light">
+                  <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                      <p id="fDate0"></p>
+                      <p id="fImg0"></p>
+                      <p>Temp:<span id="fTemp0"></span></p>
+                      <p>Humidity:<span id="fHumidity0"></span></p>
+                  </div>
 
-  <h3>5-Day Forecast: </h3>
-    <div class="row">
-      <div class="col day1">
-        
+                  <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                      <p id="fDate1"></p>
+                      <p id="fImg1"></p>
+                      <p>Temp:<span id="fTemp1"></span></p>
+                      <p>Humidity:<span id="fHumidity1"></span></p>
+                  </div>
+
+                  <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                      <p id="fDate2"></p>
+                      <p id="fImg2"></p>
+                      <p>Temp:<span id="fTemp2"></span></p>
+                      <p>Humidity:<span id="fHumidity2"></span></p>
+                  </div>
+
+                  <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded">
+                      <p id="fDate3"></p>
+                      <p id="fImg3"></p>
+                      <p>Temp:<span id="fTemp3"></span></p>
+                      <p>Humidity:<span id="fHumidity3"></span></p>
+                  </div>
+
+                  <div class="col-sm-2 bg-primary forecast text-white ml-2 mb-3 p-2 mt-2 rounded" >
+                      <p id="fDate4"></p>
+                      <p id="fImg4"></p>
+                      <p>Temp:<span id="fTemp4"></span></p>
+                      <p>Humidity:<span id="fHumidity4"></span></p>
+                  </div>
+
+              </div>
+          </div>
       </div>
-      <div class="col day2">
-        
-      </div>
-      <div class="col day3">
-        
-      </div>
-      <div class="col day4">
-        
-      </div>
-      <div class="col day5">
-        
-      </div>
-    </div>
   </div>
-
-
+</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

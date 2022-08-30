@@ -1,31 +1,3 @@
-header{
-    background-color: lightslategray;
-    text-align: center;
-}
-
-#side-bar{
-    display:inline-block;
-    height: 75vh;
-    line-height: 50px;
-}
-
-
-.weather-info-container{
-    display: inline-block;
-    margin-left: 20px;
-   position: fixed;
-    border-style: solid;
-    width: 75vw;
-    height: 75vh;
-}
-
-.uv-low{
-    background-color: lightgreen;
-}
-
-.uv-moderate{
-    background-color: orange;
-}
-.uv-high{
-    background-color: red;
+*{
+    box-sizing: border-box;
 }
