@@ -100,6 +100,28 @@ function addToList(c){
   $(".list-group").append(listEl);
 }
 
+function invokePastSearch(event){
+  var liEl=event.target;
+  if (event.target.matches("li")){
+      city=liEl.textContent.trim();
+      currentWeather(city);
+  }
+
+}
+
+function loadlastCity(){
+  $("ul").empty();
+  var sCity = JSON.parse(localStorage.getItem("cityname"));
+  if(sCity!==null){
+      sCity=JSON.parse(localStorage.getItem("cityname"));
+      for(i=0; i<sCity.length;i++){
+          addToList(sCity[i]);
+      }
+      city=sCity[i-1];
+      currentWeather(city);
+  }
+}
+
 
 
 
