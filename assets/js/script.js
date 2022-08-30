@@ -122,7 +122,15 @@ function loadlastCity(){
   }
 }
 
-
+function clearHistory(event){
+  event.preventDefault();
+  sCity=[];
+  localStorage.removeItem("cityname");
+  document.location.reload();
+}
 
 
 $("#search-button").on("click",displayWeather);
+$(document).on("click",invokePastSearch);
+$(window).on("load",loadlastCity);
+$("#clear-history").on("click",clearHistory);
