@@ -56,19 +56,18 @@ function currentWeather(city){
                   addToList(city);
               }
           }
-      }
-
-      function UVIndex(ln,lt){
-        var uvqURL="https://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey+"&lat="+lt+"&lon="+ln;
-        $.ajax({
-                url:uvqURL,
-                method:"GET"
-                }).then(function(response){
-                    $(currentUvindex).html(response.value);
-                });
-    }
-      
+      }      
   });
+}
+
+function UVIndex(ln,lt){
+  var uvqURL="https://api.openweathermap.org/data/2.5/uvi?appid="+ APIKey+"&lat="+lt+"&lon="+ln;
+  $.ajax({
+          url:uvqURL,
+          method:"GET"
+          }).then(function(response){
+              $(currentUvindex).html(response.value);
+          });
 }
 
 function forecast(cityid){
@@ -93,5 +92,15 @@ function forecast(cityid){
       }
   });
 }
+
+function addToList(c){
+  var listEl= $("<li>"+c.toUpperCase()+"</li>");
+  $(listEl).attr("class","list-group-item");
+  $(listEl).attr("data-value",c.toUpperCase());
+  $(".list-group").append(listEl);
+}
+
+
+
 
 $("#search-button").on("click",displayWeather);
